@@ -390,9 +390,19 @@ button, a, input, select {
   transition: filter .25s;
 }
 
-.gallery-img:hover {
-  filter: grayscale(.3);
+.gallery-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1.08;
+  object-fit: cover;
+  filter: brightness(0.88) contrast(1.08);
+  background: #171717;
+  transition: filter .25s;
 }
+
+.gallery-img:hover {
+  filter: brightness(1) contrast(1.03);
+  }
 
 /* SERVIÇOS */
 
