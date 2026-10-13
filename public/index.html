@@ -373,35 +373,62 @@ button, a, input, select {
 
 /* GALERIA */
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin-top: 34px;
+
+.gallery-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+  background: #151515;
+  filter: brightness(0.88) contrast(1.08);
+  transition: filter 0.25s ease;
 }
 
-<div class="gallery">
-  <img
-    class="gallery-img"
-    loading="lazy"
-    alt="Tatuagem realista de guerreiro no braço"
-    src="/tatuagem-1.jpg"
-  >
+.gallery-img:hover {
+  filter: brightness(1) contrast(1.05);
+}
 
-  <img
-    class="gallery-img"
-    loading="lazy"
-    alt="Tatuagem realista de tubarão no ombro"
-    src="/tatuagem-2.jpg"
-  >
 
-  <img
-    class="gallery-img"
-    loading="lazy"
-    alt="Desenho artístico de tatuagem no papel"
-    src="/tatuagem-3.jpg"
-  >
-</div>
+
+<section class="section" id="galeria">
+  <div class="section-inner">
+
+    <div class="eyebrow">Portfólio</div>
+    <h2>Trabalhos selecionados</h2>
+
+    <p class="muted">
+      Alguns dos trabalhos do estúdio para inspirar seu próximo projeto.
+    </p>
+
+    <div class="gallery">
+
+      <img
+        class="gallery-img"
+        loading="lazy"
+        alt="Tatuagem realista de guerreiro no braço"
+        src="/tatuagem-1.jpg"
+      >
+
+      <img
+        class="gallery-img"
+        loading="lazy"
+        alt="Tatuagem realista de tubarão no ombro"
+        src="/tatuagem-2.jpg"
+      >
+
+      <img
+        class="gallery-img"
+        loading="lazy"
+        alt="Desenho artístico de tatuagem no papel"
+        src="/tatuagem-3.jpg"
+      >
+
+    </div>
+
+  </div>
+</section>
+
 
 /* SERVIÇOS */
 
