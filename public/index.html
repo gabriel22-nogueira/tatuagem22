@@ -380,29 +380,28 @@ button, a, input, select {
   margin-top: 34px;
 }
 
-.gallery-img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 1 / 1.08;
-  object-fit: cover;
-  filter: grayscale(1);
-  background: #171717;
-  transition: filter .25s;
-}
+<div class="gallery">
+  <img
+    class="gallery-img"
+    loading="lazy"
+    alt="Tatuagem realista de guerreiro no braço"
+    src="/tatuagem-1.jpg"
+  >
 
-.gallery-img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 1 / 1.08;
-  object-fit: cover;
-  filter: brightness(0.88) contrast(1.08);
-  background: #171717;
-  transition: filter .25s;
-}
+  <img
+    class="gallery-img"
+    loading="lazy"
+    alt="Tatuagem realista de tubarão no ombro"
+    src="/tatuagem-2.jpg"
+  >
 
-.gallery-img:hover {
-  filter: brightness(1) contrast(1.03);
-  }
+  <img
+    class="gallery-img"
+    loading="lazy"
+    alt="Desenho artístico de tatuagem no papel"
+    src="/tatuagem-3.jpg"
+  >
+</div>
 
 /* SERVIÇOS */
 
