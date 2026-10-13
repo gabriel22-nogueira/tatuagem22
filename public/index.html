@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -16,13 +17,9 @@
   --accent: #d7c8b4;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -88,9 +85,7 @@ button, a, input, select {
   color: #d4d0cb;
 }
 
-.navlinks a:hover {
-  color: white;
-}
+.navlinks a:hover { color: white; }
 
 .nav-cta {
   display: inline-flex;
@@ -107,14 +102,12 @@ button, a, input, select {
 /* CAPA PRINCIPAL */
 
 .hero {
-  min-height: 780px;
   min-height: 100svh;
   position: relative;
   display: flex;
   align-items: center;
   overflow: hidden;
   padding: 150px 6% 100px;
-
   background-image:
     linear-gradient(
       90deg,
@@ -130,8 +123,7 @@ button, a, input, select {
       transparent 32%,
       #05050530 100%
     ),
-    url('hero-tatuador.jpg');
-
+    url('/hero-tatuador.jpg');
   background-position: center, center, center 43%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -221,8 +213,6 @@ button, a, input, select {
   border-color: #fff;
 }
 
-/* ÍCONES DOS BOTÕES: SEM SOBREPOSIÇÃO */
-
 .btn > svg {
   display: block;
   width: 20px;
@@ -238,13 +228,6 @@ button, a, input, select {
   stroke-width: 1.6;
   stroke-linecap: round;
   stroke-linejoin: round;
-}
-
-.btn .whatsapp-icon {
-  width: 22px;
-  height: 22px;
-  flex-basis: 22px;
-  stroke-width: 1.8;
 }
 
 /* DIFERENCIAIS */
@@ -266,13 +249,8 @@ button, a, input, select {
   color: #c8c3bd;
 }
 
-.feature:first-child {
-  padding-left: 0;
-}
-
-.feature:last-child {
-  border: 0;
-}
+.feature:first-child { padding-left: 0; }
+.feature:last-child { border: 0; }
 
 .feature svg {
   width: 20px;
@@ -337,48 +315,48 @@ button, a, input, select {
   align-items: center;
 }
 
+.about-mark {
+  min-height: 300px;
+  background: linear-gradient(135deg, #181818, #090909);
+  border: 1px solid #292929;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+}
 
-<section class="section" id="galeria">
-  <div class="section-inner">
+.about-mark strong {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(34px, 5vw, 65px);
+  line-height: 1.05;
+}
 
-    <div class="eyebrow">Portfólio</div>
-    <h2>Trabalhos selecionados</h2>
+.tags {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
 
-    <p class="muted">
-      Alguns dos trabalhos do estúdio para inspirar seu próximo projeto.
-    </p>
-
-    <div class="gallery">
-
-      <img
-        class="gallery-img"
-        loading="lazy"
-        alt="Tatuagem realista de guerreiro no braço"
-        src="/tatuagem-1.jpg"
-      >
-
-      <img
-        class="gallery-img"
-        loading="lazy"
-        alt="Tatuagem realista de tubarão no ombro"
-        src="/tatuagem-2.jpg"
-      >
-
-      <img
-        class="gallery-img"
-        loading="lazy"
-        alt="Desenho artístico de tatuagem no papel"
-        src="/tatuagem-3.jpg"
-      >
-
-    </div>
-
-  </div>
-</section>
-
+.tag {
+  border: 1px solid #333;
+  padding: 10px 13px;
+  color: #c9c4be;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
 
 /* GALERIA */
 
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 34px;
+}
 
 .gallery-img {
   display: block;
@@ -386,18 +364,13 @@ button, a, input, select {
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: center;
-  background: #151515;
-  filter: brightness(0.88) contrast(1.08);
-  transition: filter 0.25s ease;
+  background: #171717;
+  transition: filter .25s ease, transform .25s ease;
 }
 
 .gallery-img:hover {
-  filter: brightness(1) contrast(1.05);
+  filter: brightness(1.08);
 }
-
-
-
-
 
 /* SERVIÇOS */
 
@@ -502,13 +475,8 @@ button, a, input, select {
     padding: 18px 5%;
   }
 
-  .brand {
-    font-size: 23px;
-  }
-
-  .navlinks {
-    display: none;
-  }
+  .brand { font-size: 23px; }
+  .navlinks { display: none; }
 
   .nav-cta {
     padding: 12px 15px;
@@ -532,7 +500,7 @@ button, a, input, select {
         #05050555 50%,
         #05050528 100%
       ),
-      url('hero-tatuador.jpg');
+      url('/hero-tatuador.jpg');
     background-position: center, center, 62% center;
   }
 
@@ -561,9 +529,7 @@ button, a, input, select {
     margin-bottom: 27px;
   }
 
-  .actions {
-    gap: 10px;
-  }
+  .actions { gap: 10px; }
 
   .btn {
     min-height: 49px;
@@ -595,39 +561,26 @@ button, a, input, select {
     letter-spacing: .7px;
   }
 
-  .side-note {
-    display: none;
-  }
+  .side-note { display: none; }
 
-  .section {
-    padding: 68px 6%;
-  }
+  .section { padding: 68px 6%; }
 
   .about-grid {
     grid-template-columns: 1fr;
     gap: 28px;
   }
 
-  .about-mark {
-    min-height: 210px;
-  }
+  .about-mark { min-height: 210px; }
 
   .gallery {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px;
   }
 
-  .service-grid {
-    grid-template-columns: 1fr;
-  }
+  .service-grid { grid-template-columns: 1fr; }
+  .fields { grid-template-columns: 1fr; }
 
-  .fields {
-    grid-template-columns: 1fr;
-  }
-
-  .footer {
-    padding: 28px 6%;
-  }
+  .footer { padding: 28px 6%; }
 }
 
 @media (max-width: 390px) {
@@ -636,21 +589,13 @@ button, a, input, select {
     align-items: stretch;
   }
 
-  .btn {
-    width: 100%;
-  }
+  .btn { width: 100%; }
 
-  .features {
-    gap: 0;
-  }
+  .features { gap: 0; }
 
-  .feature {
-    padding: 0 8px;
-  }
+  .feature { padding: 0 8px; }
 
-  .feature span {
-    font-size: 7px;
-  }
+  .feature span { font-size: 7px; }
 
   .feature svg {
     width: 15px;
@@ -705,26 +650,22 @@ button, a, input, select {
         <span aria-hidden="true">→</span>
       </a>
 
-      <!-- BOTÃO WHATSAPP CORRIGIDO -->
       <a
-  class="btn"
-  href="https://wa.me/5521999999999"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <svg
-    class="whatsapp-icon"
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    width="22"
-    height="22"
-    aria-hidden="true"
-    style="display:block; flex-shrink:0; fill:currentColor; stroke:none;"
-  >
-    <path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.97L2.25 22l5.2-1.36A9.95 9.95 0 1 0 12.04 2Zm0 18.1a8.15 8.15 0 0 1-4.16-1.14l-.3-.18-3.09.81.83-3.01-.2-.31A8.13 8.13 0 1 1 12.04 20.1Zm4.46-6.1c-.24-.12-1.43-.71-1.65-.79-.22-.08-.38-.12-.54.12-.16.24-.62.79-.76.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.21-1.43-1.35-1.67-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.31-.74-1.79-.19-.47-.39-.41-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.09 3.62.57.25 1.02.4 1.37.51.58.18 1.1.15 1.51.09.46-.07 1.43-.59 1.63-1.15.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z"/>
-  </svg>
-  <span>Falar no WhatsApp</span>
-</a>
+        class="btn"
+        href="https://wa.me/5521999999999"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          style="display:block;width:20px;height:20px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"
+        >
+          <path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.7A8.5 8.5 0 1 1 20.5 11.5Z"/>
+          <path d="M8.5 8.5c.4 2 2 3.6 4 4.1l1.4-1 2 1c-.2 1.4-1.2 2.2-2.5 2-3.2-.5-6.2-3.5-6.7-6.7-.2-1.3.6-2.3 2-2.5l1 2Z"/>
+        </svg>
+        <span>Falar no WhatsApp</span>
+      </a>
 
     </div>
 
@@ -785,6 +726,7 @@ button, a, input, select {
   </div>
 </section>
 
+<!-- GALERIA COM SUAS IMAGENS -->
 <section class="section" id="galeria">
   <div class="section-inner">
 
@@ -792,16 +734,30 @@ button, a, input, select {
     <h2>Trabalhos selecionados</h2>
 
     <p class="muted">
-      Alguns estilos e referências para inspirar seu próximo projeto.
+      Alguns dos trabalhos do estúdio para inspirar seu próximo projeto.
     </p>
 
     <div class="gallery">
-      <img class="gallery-img" loading="lazy" alt="Tatuagem artística em preto e cinza" src="https://images.unsplash.com/photo-1598373182133-52452f7691ef?auto=format&fit=crop&w=800&q=80">
-      <img class="gallery-img" loading="lazy" alt="Detalhe de tatuagem" src="https://images.unsplash.com/photo-1590246814883-57c5110d9b8c?auto=format&fit=crop&w=800&q=80">
-      <img class="gallery-img" loading="lazy" alt="Tatuagem em braço" src="https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?auto=format&fit=crop&w=800&q=80">
-      <img class="gallery-img" loading="lazy" alt="Arte de tatuagem" src="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&w=800&q=80">
-      <img class="gallery-img" loading="lazy" alt="Tatuagem blackwork" src="https://images.unsplash.com/photo-1542909192-8c7d8e8f4e5b?auto=format&fit=crop&w=800&q=80">
-      <img class="gallery-img" loading="lazy" alt="Trabalho de tatuagem detalhado" src="https://images.unsplash.com/photo-1565058379802-bbe93b2f7031?auto=format&fit=crop&w=800&q=80">
+      <img
+        class="gallery-img"
+        loading="lazy"
+        src="/tatuagem-1.jpg"
+        alt="Tatuagem realista de guerreiro no braço"
+      >
+
+      <img
+        class="gallery-img"
+        loading="lazy"
+        src="/tatuagem-2.jpg"
+        alt="Tatuagem realista de tubarão no ombro"
+      >
+
+      <img
+        class="gallery-img"
+        loading="lazy"
+        src="/tatuagem-3.jpg"
+        alt="Desenho artístico de tatuagem no papel"
+      >
     </div>
 
   </div>
@@ -972,4 +928,4 @@ Minha ideia: ${detalhes}`;
 </script>
 
 </body>
-  </html>
+</html>
