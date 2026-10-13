@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#080808">
 <title>Tattoo Studio | Arte na pele</title>
-<meta name="description" content="Conheça o trabalho, explore a galeria e agende sua próxima tatuagem.">
+<meta name="description" content="Conheça o trabalho do tatuador, explore o portfólio e agende sua próxima tatuagem.">
 
 <style>
 :root {
@@ -349,29 +349,6 @@ button, a, input, select {
   text-transform: uppercase;
 }
 
-/* GALERIA */
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 34px;
-}
-
-.gallery-img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center;
-  background: #171717;
-  transition: filter .25s ease, transform .25s ease;
-}
-
-.gallery-img:hover {
-  filter: brightness(1.08);
-}
-
 /* SERVIÇOS */
 
 .service-grid {
@@ -572,11 +549,6 @@ button, a, input, select {
 
   .about-mark { min-height: 210px; }
 
-  .gallery {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px;
-  }
-
   .service-grid { grid-template-columns: 1fr; }
   .fields { grid-template-columns: 1fr; }
 
@@ -616,7 +588,7 @@ button, a, input, select {
   <div class="navlinks">
     <a href="#inicio">Início</a>
     <a href="#sobre">Sobre</a>
-    <a href="#galeria">Galeria</a>
+    <a href="/galeria.html">Portfólio</a>
     <a href="#servicos">Serviços</a>
     <a href="#agendar">Agendar</a>
   </div>
@@ -650,36 +622,10 @@ button, a, input, select {
         <span aria-hidden="true">→</span>
       </a>
 
-      <a
-        class="btn"
-        href="https://wa.me/5521999999999"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <svg
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-          style="display:block;width:20px;height:20px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"
-        >
-          <a
-  class="btn"
-  href="https://wa.me/5521999999999"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <svg
-    class="whatsapp-icon"
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    width="22"
-    height="22"
-    aria-hidden="true"
-    style="display:block; flex-shrink:0; fill:currentColor; stroke:none;"
-  >
-    <path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.97L2.25 22l5.2-1.36A9.95 9.95 0 1 0 12.04 2Zm0 18.1a8.15 8.15 0 0 1-4.16-1.14l-.3-.18-3.09.81.83-3.01-.2-.31A8.13 8.13 0 1 1 12.04 20.1Zm4.46-6.1c-.24-.12-1.43-.71-1.65-.79-.22-.08-.38-.12-.54.12-.16.24-.62.79-.76.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.21-1.43-1.35-1.67-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.31-.74-1.79-.19-.47-.39-.41-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.09 3.62.57.25 1.02.4 1.37.51.58.18 1.1.15 1.51.09.46-.07 1.43-.59 1.63-1.15.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z"/>
-  </svg>
-  <span>Falar no WhatsApp</span>
-</a>
+      <a class="btn" href="/galeria.html">
+        <span>Portfólio</span>
+        <span aria-hidden="true">→</span>
+      </a>
 
     </div>
 
@@ -740,43 +686,6 @@ button, a, input, select {
   </div>
 </section>
 
-<!-- GALERIA COM SUAS IMAGENS -->
-<section class="section" id="galeria">
-  <div class="section-inner">
-
-    <div class="eyebrow">Portfólio</div>
-    <h2>Trabalhos selecionados</h2>
-
-    <p class="muted">
-      Alguns dos trabalhos do estúdio para inspirar seu próximo projeto.
-    </p>
-
-    <div class="gallery">
-      <img
-        class="gallery-img"
-        loading="lazy"
-        src="/tatuagem-1.jpg"
-        alt="Tatuagem realista de guerreiro no braço"
-      >
-
-      <img
-        class="gallery-img"
-        loading="lazy"
-        src="/tatuagem-2.jpg"
-        alt="Tatuagem realista de tubarão no ombro"
-      >
-
-      <img
-        class="gallery-img"
-        loading="lazy"
-        src="/tatuagem-3.jpg"
-        alt="Desenho artístico de tatuagem no papel"
-      >
-    </div>
-
-  </div>
-</section>
-
 <section class="section" id="servicos">
   <div class="section-inner">
 
@@ -832,6 +741,7 @@ button, a, input, select {
             id="nome"
             name="nome"
             placeholder="Como podemos te chamar?"
+            autocomplete="name"
             required
           >
         </div>
@@ -842,6 +752,7 @@ button, a, input, select {
             id="whatsapp"
             name="whatsapp"
             type="tel"
+            autocomplete="tel"
             placeholder="(21) 99999-9999"
             required
           >
@@ -890,14 +801,14 @@ button, a, input, select {
 <script>
 /*
   IMPORTANTE:
-  Troque o número abaixo pelo WhatsApp verdadeiro do tatuador.
+  Substitua pelo WhatsApp verdadeiro do tatuador.
   Use apenas números: código do país + DDD + número.
-  Exemplo de formato: 5521999999999
+  Exemplo: 5521999999999
 */
 
 const WHATSAPP_NUMBER = "5521999999999";
 
-/* Define a data mínima do formulário como hoje. */
+/* Impede selecionar uma data anterior a hoje. */
 const campoData = document.getElementById("data");
 const hoje = new Date();
 const ano = hoje.getFullYear();
@@ -906,7 +817,7 @@ const dia = String(hoje.getDate()).padStart(2, "0");
 
 campoData.min = `${ano}-${mes}-${dia}`;
 
-/* Abre o WhatsApp com os dados preenchidos. */
+/* Envia os dados do agendamento pelo WhatsApp. */
 document
   .getElementById("bookingForm")
   .addEventListener("submit", function(event) {
@@ -919,8 +830,11 @@ document
     const telefone = formulario.get("whatsapp");
     const servico = formulario.get("servico");
     const data = formulario.get("data");
-    const detalhes = formulario.get("detalhes") ||
+    const detalhes = formulario.get("detalhes")?.trim() ||
       "Quero conversar sobre a ideia.";
+
+    const [anoData, mesData, diaData] = data.split("-");
+    const dataFormatada = `${diaData}/${mesData}/${anoData}`;
 
     const mensagem =
 `Olá! Gostaria de solicitar um agendamento.
@@ -928,7 +842,7 @@ document
 Nome: ${nome}
 Meu WhatsApp: ${telefone}
 Tipo de atendimento: ${servico}
-Data desejada: ${data}
+Data desejada: ${dataFormatada}
 Minha ideia: ${detalhes}`;
 
     const link =
