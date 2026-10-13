@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -39,6 +39,8 @@ a {
 button, a, input, select {
   -webkit-tap-highlight-color: transparent;
 }
+
+/* NAVEGAÇÃO */
 
 .nav {
   position: absolute;
@@ -86,10 +88,6 @@ button, a, input, select {
   color: #d4d0cb;
 }
 
-.navlinks a {
-  transition: color .2s;
-}
-
 .navlinks a:hover {
   color: white;
 }
@@ -104,13 +102,9 @@ button, a, input, select {
   font-size: 11px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  transition: background .2s, color .2s;
 }
 
-.nav-cta:hover {
-  background: #f2eee9;
-  color: #111;
-}
+/* CAPA PRINCIPAL */
 
 .hero {
   min-height: 780px;
@@ -120,21 +114,40 @@ button, a, input, select {
   align-items: center;
   overflow: hidden;
   padding: 150px 6% 100px;
+
   background-image:
-    linear-gradient(90deg, #030303 0%, #030303f2 26%, #030303b8 47%, #03030355 70%, #03030372 100%),
-    linear-gradient(0deg, #050505a8 0%, transparent 32%, #05050530 100%),
+    linear-gradient(
+      90deg,
+      #030303 0%,
+      #030303f2 26%,
+      #030303b8 47%,
+      #03030355 70%,
+      #03030372 100%
+    ),
+    linear-gradient(
+      0deg,
+      #050505a8 0%,
+      transparent 32%,
+      #05050530 100%
+    ),
     url('hero-tatuador.jpg');
+
   background-position: center, center, center 43%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.hero:after {
+.hero::after {
   content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: radial-gradient(ellipse at 68% 42%, transparent 0%, #00000020 55%, #00000050 100%);
+  background: radial-gradient(
+    ellipse at 68% 42%,
+    transparent 0%,
+    #00000020 55%,
+    #00000050 100%
+  );
 }
 
 .hero-content {
@@ -154,7 +167,7 @@ button, a, input, select {
 }
 
 .hero h1 {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-weight: 400;
   font-size: clamp(54px, 7.2vw, 100px);
   line-height: .91;
@@ -170,6 +183,8 @@ button, a, input, select {
   color: #c2bfbb;
   margin: 0 0 34px;
 }
+
+/* BOTÕES */
 
 .actions {
   display: flex;
@@ -190,6 +205,7 @@ button, a, input, select {
   letter-spacing: 1.1px;
   text-transform: uppercase;
   transition: all .2s;
+  cursor: pointer;
 }
 
 .btn-primary {
@@ -205,15 +221,33 @@ button, a, input, select {
   border-color: #fff;
 }
 
-.btn svg,
-.feature svg {
+/* ÍCONES DOS BOTÕES: SEM SOBREPOSIÇÃO */
+
+.btn > svg {
+  display: block;
   width: 20px;
   height: 20px;
+  flex: 0 0 20px;
+  position: static;
+  margin: 0;
+  padding: 0;
+  transform: none;
+  pointer-events: none;
   fill: none;
   stroke: currentColor;
-  stroke-width: 1.5;
-  flex-shrink: 0;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
+
+.btn .whatsapp-icon {
+  width: 22px;
+  height: 22px;
+  flex-basis: 22px;
+  stroke-width: 1.8;
+}
+
+/* DIFERENCIAIS */
 
 .features {
   display: flex;
@@ -240,6 +274,15 @@ button, a, input, select {
   border: 0;
 }
 
+.feature svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
 .feature span {
   font-size: 10px;
   line-height: 1.6;
@@ -259,6 +302,8 @@ button, a, input, select {
   color: #b5b0a9;
   text-transform: uppercase;
 }
+
+/* SEÇÕES */
 
 .section {
   padding: 95px 7%;
@@ -282,6 +327,8 @@ button, a, input, select {
   color: #aaa49d;
   line-height: 1.8;
 }
+
+/* SOBRE O TATUADOR */
 
 .about-grid {
   display: grid;
@@ -324,6 +371,8 @@ button, a, input, select {
   text-transform: uppercase;
 }
 
+/* GALERIA */
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -344,6 +393,8 @@ button, a, input, select {
 .gallery-img:hover {
   filter: grayscale(.3);
 }
+
+/* SERVIÇOS */
 
 .service-grid {
   display: grid;
@@ -371,6 +422,8 @@ button, a, input, select {
   line-height: 1.7;
   margin: 0;
 }
+
+/* AGENDAMENTO */
 
 .booking {
   background: #101010;
@@ -416,11 +469,12 @@ button, a, input, select {
 
 .booking .btn {
   margin-top: 22px;
-  cursor: pointer;
   background: #eee7dd;
   color: #111;
   border-color: #eee7dd;
 }
+
+/* RODAPÉ */
 
 .footer {
   padding: 35px 7%;
@@ -435,7 +489,9 @@ button, a, input, select {
   flex-wrap: wrap;
 }
 
-@media(max-width:800px) {
+/* CELULAR */
+
+@media (max-width: 800px) {
   .nav {
     min-height: 78px;
     padding: 18px 5%;
@@ -459,8 +515,18 @@ button, a, input, select {
     padding: 135px 6% 54px;
     align-items: flex-end;
     background-image:
-      linear-gradient(90deg, #030303e8 0%, #030303a8 55%, #03030345 100%),
-      linear-gradient(0deg, #050505e8 0%, #05050555 50%, #05050528 100%),
+      linear-gradient(
+        90deg,
+        #030303e8 0%,
+        #030303a8 55%,
+        #03030345 100%
+      ),
+      linear-gradient(
+        0deg,
+        #050505e8 0%,
+        #05050555 50%,
+        #05050528 100%
+      ),
       url('hero-tatuador.jpg');
     background-position: center, center, 62% center;
   }
@@ -559,7 +625,7 @@ button, a, input, select {
   }
 }
 
-@media(max-width:390px) {
+@media (max-width: 390px) {
   .actions {
     flex-direction: column;
     align-items: stretch;
@@ -630,11 +696,11 @@ button, a, input, select {
           <rect x="3" y="5" width="18" height="16" rx="2"/>
           <path d="M16 3v4M8 3v4M3 10h18M8 14h3M8 17h6"/>
         </svg>
-        Agendar tatuagem
+        <span>Agendar tatuagem</span>
         <span aria-hidden="true">→</span>
       </a>
 
-      <!-- Botão WhatsApp com ícone atualizado -->
+      <!-- BOTÃO WHATSAPP CORRIGIDO -->
       <a
         class="btn"
         href="https://wa.me/5521999999999"
@@ -642,19 +708,16 @@ button, a, input, select {
         rel="noopener noreferrer"
         aria-label="Falar no WhatsApp"
       >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path
-            d="M20.5 11.8a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.3-4.7A8.5 8.5 0 1 1 20.5 11.8Z"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M8.4 7.8c.3-.7.6-.7 1-.7h.5c.2 0 .4.1.5.4l.8 1.9c.1.2.1.4-.1.6l-.6.8c-.2.2-.2.4 0 .7.5.9 1.3 1.7 2.2 2.2.3.2.5.2.7 0l.8-1c.2-.2.4-.2.7-.1l1.8.9c.3.1.4.3.4.5 0 .4-.2 1.2-.8 1.7-.5.5-1.3.7-2 .5-1-.2-2.3-.8-3.6-2-1.5-1.3-2.4-2.9-2.7-4-.3-.9 0-1.8.4-2.4Z"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
+        <svg
+          class="whatsapp-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path d="M20.5 11.5a8.5 8.5 0 0 1-12.55 7.48L3 20l1.08-4.8A8.5 8.5 0 1 1 20.5 11.5Z"/>
+          <path d="M8.5 8.5c.4 2 2 3.6 4 4l1.3-1 2.1 1c-.2 1.3-1.2 2.1-2.5 2-3.2-.5-6.2-3.5-6.7-6.7-.2-1.3.6-2.3 2-2.5l1 2Z"/>
         </svg>
-        Falar no WhatsApp
+        <span>Falar no WhatsApp</span>
       </a>
 
     </div>
@@ -686,9 +749,7 @@ button, a, input, select {
     </div>
   </div>
 
-  <div class="side-note">
-    Arte / respeito / autenticidade
-  </div>
+  <div class="side-note">Arte / respeito / autenticidade</div>
 </header>
 
 <section class="section" id="sobre">
@@ -696,7 +757,6 @@ button, a, input, select {
 
     <div>
       <div class="eyebrow">O tatuador</div>
-
       <h2>Arte que conta<br>uma história.</h2>
 
       <p class="muted">
@@ -730,32 +790,14 @@ button, a, input, select {
     </p>
 
     <div class="gallery">
-
-      <img class="gallery-img" loading="lazy"
-        alt="Tatuagem artística em preto e cinza"
-        src="https://images.unsplash.com/photo-1598373182133-52452f7691ef?auto=format&fit=crop&w=800&q=80">
-
-      <img class="gallery-img" loading="lazy"
-        alt="Detalhe de tatuagem"
-        src="https://images.unsplash.com/photo-1590246814883-57c5110d9b8c?auto=format&fit=crop&w=800&q=80">
-
-      <img class="gallery-img" loading="lazy"
-        alt="Tatuagem em braço"
-        src="https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?auto=format&fit=crop&w=800&q=80">
-
-      <img class="gallery-img" loading="lazy"
-        alt="Arte de tatuagem"
-        src="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&w=800&q=80">
-
-      <img class="gallery-img" loading="lazy"
-        alt="Tatuagem blackwork"
-        src="https://images.unsplash.com/photo-1542909192-8c7d8e8f4e5b?auto=format&fit=crop&w=800&q=80">
-
-      <img class="gallery-img" loading="lazy"
-        alt="Trabalho de tatuagem detalhado"
-        src="https://images.unsplash.com/photo-1565058379802-bbe93b2f7031?auto=format&fit=crop&w=800&q=80">
-
+      <img class="gallery-img" loading="lazy" alt="Tatuagem artística em preto e cinza" src="https://images.unsplash.com/photo-1598373182133-52452f7691ef?auto=format&fit=crop&w=800&q=80">
+      <img class="gallery-img" loading="lazy" alt="Detalhe de tatuagem" src="https://images.unsplash.com/photo-1590246814883-57c5110d9b8c?auto=format&fit=crop&w=800&q=80">
+      <img class="gallery-img" loading="lazy" alt="Tatuagem em braço" src="https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?auto=format&fit=crop&w=800&q=80">
+      <img class="gallery-img" loading="lazy" alt="Arte de tatuagem" src="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&w=800&q=80">
+      <img class="gallery-img" loading="lazy" alt="Tatuagem blackwork" src="https://images.unsplash.com/photo-1542909192-8c7d8e8f4e5b?auto=format&fit=crop&w=800&q=80">
+      <img class="gallery-img" loading="lazy" alt="Trabalho de tatuagem detalhado" src="https://images.unsplash.com/photo-1565058379802-bbe93b2f7031?auto=format&fit=crop&w=800&q=80">
     </div>
+
   </div>
 </section>
 
@@ -870,27 +912,57 @@ button, a, input, select {
 </footer>
 
 <script>
-const WHATSAPP_NUMBER = '5521999999999';
+/*
+  IMPORTANTE:
+  Troque o número abaixo pelo WhatsApp verdadeiro do tatuador.
+  Use apenas números: código do país + DDD + número.
+  Exemplo de formato: 5521999999999
+*/
 
-document.getElementById('bookingForm').addEventListener('submit', function(e) {
-  e.preventDefault();
+const WHATSAPP_NUMBER = "5521999999999";
 
-  const f = new FormData(this);
+/* Define a data mínima do formulário como hoje. */
+const campoData = document.getElementById("data");
+const hoje = new Date();
+const ano = hoje.getFullYear();
+const mes = String(hoje.getMonth() + 1).padStart(2, "0");
+const dia = String(hoje.getDate()).padStart(2, "0");
 
-  const msg =
-    `Olá! Gostaria de solicitar um agendamento.\n` +
-    `Nome: ${f.get('nome')}\n` +
-    `WhatsApp: ${f.get('whatsapp')}\n` +
-    `Atendimento: ${f.get('servico')}\n` +
-    `Data desejada: ${f.get('data')}\n` +
-    `Minha ideia: ${f.get('detalhes') || 'Quero conversar sobre a ideia.'}`;
+campoData.min = `${ano}-${mes}-${dia}`;
 
-  window.open(
-    `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`,
-    '_blank',
-    'noopener,noreferrer'
-  );
-});
+/* Abre o WhatsApp com os dados preenchidos. */
+document
+  .getElementById("bookingForm")
+  .addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const formulario = new FormData(this);
+
+    const nome = formulario.get("nome");
+    const telefone = formulario.get("whatsapp");
+    const servico = formulario.get("servico");
+    const data = formulario.get("data");
+    const detalhes = formulario.get("detalhes") ||
+      "Quero conversar sobre a ideia.";
+
+    const mensagem =
+`Olá! Gostaria de solicitar um agendamento.
+
+Nome: ${nome}
+Meu WhatsApp: ${telefone}
+Tipo de atendimento: ${servico}
+Data desejada: ${data}
+Minha ideia: ${detalhes}`;
+
+    const link =
+      "https://wa.me/" +
+      WHATSAPP_NUMBER +
+      "?text=" +
+      encodeURIComponent(mensagem);
+
+    window.open(link, "_blank", "noopener,noreferrer");
+  });
 </script>
 
 </body>
